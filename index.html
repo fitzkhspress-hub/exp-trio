@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposure Trio Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Exposure Trio</h1>
+            <p>Set your camera before you shoot.</p>
+        </header>
+
+        <div class="scene-selector">
+            <label for="scene">Location Lighting:</label>
+            <select id="scene">
+                <option value="6">Outdoors, non-sports (Bright)</option>
+                <option value="11" selected>Classrooms + labs (Medium)</option>
+                <option value="15">Stage shows / Dances (Dark)</option>
+            </select>
+        </div>
+
+        <div class="meter-container">
+            <h2>The Meter</h2>
+            <div class="meter-bar">
+                <div class="meter-marks">
+                    <span>-3</span><span>-2</span><span>-1</span>
+                    <span class="zero">0</span>
+                    <span>+1</span><span>+2</span><span>+3</span>
+                </div>
+                <div class="meter-pointer" id="pointer"></div>
+            </div>
+            <p id="meter-status" class="status-text">AIM FOR 0</p>
+        </div>
+
+        <div class="control-group">
+            <h3>Aperture (f-stop)</h3>
+            <p class="description">How wide the lens opens.</p>
+            <input type="range" id="aperture" min="0" max="6" value="3">
+            <div class="value-display" id="aperture-val">f/8</div>
+            <p class="hint" id="aperture-hint"></p>
+        </div>
+
+        <div class="control-group">
+            <h3>Shutter Speed</h3>
+            <p class="description">How long the camera looks.</p>
+            <input type="range" id="shutter" min="0" max="6" value="3">
+            <div class="value-display" id="shutter-val">1/125</div>
+            <p class="hint" id="shutter-hint"></p>
+        </div>
+
+        <div class="control-group">
+            <h3>ISO</h3>
+            <p class="description">How sensitive the camera is to light.</p>
+            <input type="range" id="iso" min="0" max="6" value="4">
+            <div class="value-display" id="iso-val">1600</div>
+            <p class="hint" id="iso-hint"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
